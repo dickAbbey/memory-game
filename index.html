@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  
+  
+  <title>Frontend Mentor | Memory game</title>
+</head>
+<body>
+
+  <!-- Game setup start -->
+  <div class="main-body">
+    <div class="start-section">
+      <div class="start-title"> memory </div>
+
+      <div class="start-body">
+        <div class="theme">
+          <div class="theme-title"> Select Theme</div>
+          <div class="theme-button-body">
+            <input type="button" class="theme-button" onclick="themeOption('numbers')" id="theme-button-num" value="numbers">
+            <input type="button" class="theme-button" onclick="themeOption('icons')" id="theme-button-icon" value="icons">
+          </div>
+        </div>
+
+        <div class="players">
+          <div class="players-title"> Number of Players </div>
+          <div class="player-button-body">
+            <input type="button" class="player-button-num" onclick="playerOption('1')" id="player-button-one" value="1" id="one" >
+            <input type="button" class="player-button-num" onclick="playerOption('2')" id="player-button-two" value="2" id="two">
+            <input type="button" class="player-button-num" onclick="playerOption('3')" id="player-button-three" value="3" id="three">
+            <input type="button" class="player-button-num" onclick="playerOption('4')" id="player-button-four" value="4" id="four">
+          </div>
+          
+        </div>
+
+        <div class="size">
+          <div class="Grid-title"> Grid Size </div>
+          <div class="grid-button-body">
+            <input type="button" class="grid-button-num" onclick="gridOption('4x4')" id="grid-button-4x4" value="4x4">
+            <input type="button" class="grid-button-num" onclick="gridOption('6x6')" id="grid-button-6x6" value="6x6">
+          </div>
+          
+        </div>
+
+        <div class="start-button">
+          <input type="reset" id="start-game" onclick="start()" value="Start Game">
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  Select Theme
+  Numbers
+  Icons
+
+  Number of Players
+  1
+  2
+  3
+  4
+
+  Grid Size
+  4x4
+  6x6
+
+  Start Game
+
+  <!-- Game setup end -->
+
+  <!-- Game board start -->
+
+  Restart
+  New Game
+
+  <!-- Multiplayer scores start -->
+
+  Player 1
+  <!-- P1 score -->
+  Current Turn
+
+  Player 2
+  <!-- P2 score -->
+  Current Turn
+
+  Player 3
+  <!-- P3 score -->
+  Current Turn
+
+  Player 4
+  <!-- P4 score -->
+  Current Turn
+
+  <!-- Multiplayer scores start -->
+
+  <!-- Solo game time and moves counter start -->
+
+  Time
+  <!-- Time elapsed -->
+
+  Moves
+  <!-- Moves total -->
+
+  <!-- Solo game time and moves counter end -->
+
+  <!-- Game board end -->
+
+
+
+<!-- <link rel="import" href="script.js  "> -->
+<script src="script.js"></script>
+</body>
+</html>

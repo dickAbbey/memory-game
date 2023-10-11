@@ -1,0 +1,313 @@
+
+HTML
+<!-- Game setup start -->
+  <div class="main-body">
+    <div class="start-section">
+      <div class="start-title"> memory </div>
+
+      <div class="start-body">
+        <div class="theme">
+          <div class="theme-title"> Select Theme</div>
+          <div class="theme-button-body">
+            <input type="button" class="theme-button-num" onclick="activeNumber()" id="theme-button-num" value="Numbers">
+            <input type="button" class="theme-button-icon" onclick="activeIcon()" id="theme-button-icon" value="Icons">
+          </div>
+          
+        </div>
+
+        <div class="players">
+          <div class="players-title"> Number of Players </div>
+          <div class="player-button-body">
+            <input type="button" class="player-button-num" onclick="buttonOne()" id="player-button-one" value="1" id="one" >
+            <input type="button" class="player-button-num" onclick="buttonTwo()" id="player-button-two" value="2" id="two">
+            <input type="button" class="player-button-num" onclick="buttonThree()" id="player-button-three" value="3" id="three">
+            <input type="button" class="player-button-num" onclick="buttonFour()" id="player-button-four" value="4" id="four">
+          </div>
+          
+        </div>
+
+        <div class="size">
+          <div class="Grid-title"> Grid Size </div>
+          <div class="grid-button-body">
+            <input type="button" class="grid-button-num" onclick="gridFour()" id="grid-button-4x4" value="4x4">
+          <input type="button" class="grid-button-num" onclick="gridSix()" id="grid-button-6x6" value="6x6">
+          </div>
+          
+        </div>
+
+        <div class="start-button">
+          <input type="reset" id="start-game" onclick="start()" value="Start Game">
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+
+
+*********************************************************************************
+CSS
+
+body{
+    background-color: rgb(21, 41, 56);
+}
+
+.main-body{
+    /* width: 100vw; */
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.start-body{
+    width: 50vw;
+    height: 45vh;
+    border-radius: 15px;
+    padding: 35px 35px;
+    background-color: white;
+}
+
+.start-title{
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.theme-title, .players-title, .Grid-title{
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #7191A5;
+    margin-bottom: 5px;
+
+}
+
+.theme-button-num, .theme-button-icon{
+    color: white;
+    border-radius: 25px;
+    padding: 7px 35px;
+    width: 45%;
+    /* margin-right:5%; */
+}
+
+.player-button-num{
+    color: white;
+    width: 22%;
+    padding: 7px 25px;
+    border-radius: 25px;
+}
+
+.grid-button-num{
+    color: white;
+    width: 45%;
+    padding: 7px 25px;
+    border-radius: 25px;
+}
+
+.theme-button-body, .player-button-body, .grid-button-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="button"],input[type="reset"] {
+    cursor: pointer;
+    border: none;
+}
+
+input[type="button"]{
+    /* background-color: #BCCED9; */
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.theme-button-num, #player-button-one, #grid-button-4x4 {
+    background-color: #152938 ;
+}
+.theme-button-icon, .player-button-num {
+    background-color: #BCCED9;
+}
+
+/* input[type="button"]{
+    background-color: #BCCED9;
+} */
+
+input[type="button"]:hover{
+    background-color: #6395B8;
+}
+
+
+
+/* input[type="button"]:active{
+    background-color: #152938;
+} */
+
+input[type="reset"]{
+    background-color: #FDA214;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+
+input[type="reset"]:hover{
+    background-color: #FFB84A;
+}
+
+.theme, .players, .size{
+    margin-bottom: 25px;
+}
+
+
+******************************************************************
+JAVASCRIPT
+
+// Input
+const numbers = document.getElementById("theme-button-num");
+const icons = document.getElementById("theme-button-icon");
+
+// const quer = document.getElementById("myBtn");
+
+const playerOne = document.getElementById("player-button-one");
+const playerTwo = document.getElementById("player-button-two");
+const playerThree = document.getElementById("player-button-three");
+const playerFour = document.getElementById("player-button-four");
+
+const grid4x4 = document.getElementById("grid-button-4x4");
+const grid6x6 = document.getElementById("grid-button-6x6");
+
+const startGame = document.getElementById("start-game");
+
+
+
+// Button activeness
+function activeNumber() {
+    document.getElementById("theme-button-num").style.backgroundColor = "#152938";
+    document.getElementById("theme-button-icon").style.backgroundColor = "#BCCED9";
+}
+
+function activeIcon() {
+    document.getElementById("theme-button-icon").style.backgroundColor = "#152938";
+    document.getElementById("theme-button-num").style.backgroundColor = "#BCCED9";
+}
+
+function buttonOne() {
+    document.getElementById("player-button-one").style.backgroundColor = "#152938";
+    document.getElementById("player-button-two").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-three").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-four").style.backgroundColor = "#BCCED9";
+}
+
+function buttonTwo() {
+    document.getElementById("player-button-one").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-two").style.backgroundColor = "#152938";
+    document.getElementById("player-button-three").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-four").style.backgroundColor = "#BCCED9";
+}
+
+function buttonThree() {
+    document.getElementById("player-button-one").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-two").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-three").style.backgroundColor = "#152938";
+    document.getElementById("player-button-four").style.backgroundColor = "#BCCED9";
+}
+
+function buttonFour() {
+    document.getElementById("player-button-one").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-two").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-three").style.backgroundColor = "#BCCED9";
+    document.getElementById("player-button-four").style.backgroundColor = "#152938";
+}
+
+function gridFour() {
+    document.getElementById("grid-button-4x4").style.backgroundColor = "#152938";
+    document.getElementById("grid-button-6x6").style.backgroundColor = "#BCCED9";
+}
+
+function gridSix() {
+    document.getElementById("grid-button-4x4").style.backgroundColor = "#BCCED9";
+    document.getElementById("grid-button-6x6").style.backgroundColor = "#152938";
+}
+
+function start() {
+    
+    console.log(document.getElementById("theme-button-num"));
+    console.log(icons);
+    console.log(playerOne);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
