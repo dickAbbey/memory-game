@@ -237,6 +237,7 @@ function gridSix() {
     document.getElementById("grid-button-4x4").style.backgroundColor = "#BCCED9";
     document.getElementById("grid-button-6x6").style.backgroundColor = "#152938";
 }
+11th 14th = 64. 233.57
 
 function start() {
     

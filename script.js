@@ -33,35 +33,120 @@ function playerOption(option_value) {
 function gridOption(option_value) {
     // Select all Grid option
     let grid_options = document.querySelectorAll(".grid-button-num");
+    // let open;
 
    // Check for selected option 
    grid_options.forEach((grid_option) =>{
        if( option_value == grid_option.value){
         grid_option.classList.add("active");
+        // open = grid_option.value;
        } else{
         grid_option.classList.remove("active");
        }
    });
+//    returnss open;
 }
 
+
 function start() {
-    let options = document.querySelectorAll(".theme-button");
-    let player_options = document.querySelectorAll(".player-button-num");
-    let grid_options = document.querySelectorAll(".grid-button-num");
-    
-    // options.forEach((option) => {
-    //     player_options.forEach((player_option) =>{
-    //         grid_options.forEach((grid_option) =>{
-    //             if (option.value == "numbers" && player_option.value == "1" && grid_option.value == "4x4"  ) {
-    //                 console.log(option.value + " - " + player_option.value + " - " + grid_option.value);
-    //             }
-    //             else if (option.value == "icons" && player_option.value == "2" && grid_option.value == "6x6" ){
-    //                 console.log(option.value + " - " + player_option.value + " - " + grid_option.value);  
-    //             }
-    //         });  
-    //     });
-    // });
-    // console.log(grid_options.value);
+    let themeNum = document.getElementById("theme-button-num");
+    let themeIcon = document.getElementById("theme-button-icon");
+    let playerOne = document.getElementById("player-button-one");
+    let playerTwo = document.getElementById("player-button-two");
+    let playerThree = document.getElementById("player-button-three");
+    let playerFour = document.getElementById("player-button-four");
+    let grid4 = document.getElementById("grid-button-4x4");
+    let grid6 = document.getElementById("grid-button-6x6");
+
+    // console.log(themeNum.classList[1]);
+    // console.log(themeNum.classList[1] === "active");
+
+    // Number | Plyers | 4x4
+    if (themeNum.classList[1] === "active" && playerOne.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeNum.classList[1]+" - numbers");
+        console.log(playerOne.classList[1] + " - 1");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    } else if (themeNum.classList[1] === "active" && playerTwo.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeNum.classList[1] + " - numbers");
+        console.log(playerTwo.classList[1] + " - 2");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    } else if (themeNum.classList[1] === "active" && playerThree.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeNum.classList[1] + " - numbers");
+        console.log(playerThree.classList[1] + " - 3");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    } else if (themeNum.classList[1] === "active" && playerFour.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeNum.classList[1] + " - numbers");
+        console.log(playerFour.classList[1] + " - 4");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    } // Number | Plyers | 6x6
+    else if (themeNum.classList[1] === "active" && playerOne.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeNum.classList[1]+" - numbers");
+        console.log(playerOne.classList[1] + " - 1");
+        console.log(grid6.classList[1] + " - 6x6");
+
+    } else if (themeNum.classList[1] === "active" && playerTwo.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeNum.classList[1] + " - numbers");
+        console.log(playerTwo.classList[1] + " - 2");
+        console.log(grid6.classList[1] + " - 6x6");
+
+    } else if (themeNum.classList[1] === "active" && playerThree.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeNum.classList[1] + " - numbers");
+        console.log(playerThree.classList[1] + " - 3");
+        console.log(grid6.classList[1] + " - 6x6");
+
+    } else if (themeNum.classList[1] === "active" && playerFour.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeNum.classList[1] + " - numbers");
+        console.log(playerFour.classList[1] + " - 4");
+        console.log(grid6.classList[1] + " - 6x6");  
+
+    } // Icons | Plyers | 4x4
+    else if (themeIcon.classList[1] === "active" && playerOne.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeIcon.classList[1]+" - icons");
+        console.log(playerOne.classList[1] + " - 1");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    } else if (themeIcon.classList[1] === "active" && playerTwo.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeIcon.classList[1] + " - icons");
+        console.log(playerTwo.classList[1] + " - 2");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    } else if (themeIcon.classList[1] === "active" && playerThree.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeIcon.classList[1] + " - icons");
+        console.log(playerThree.classList[1] + " - 3");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    } else if (themeIcon.classList[1] === "active" && playerFour.classList[1] === "active" && grid4.classList[1] === "active") {
+        console.log(themeIcon.classList[1] + " - icons");
+        console.log(playerFour.classList[1] + " - 4");
+        console.log(grid4.classList[1] + " - 4x4");
+
+    }// Icons | Plyers | 6x6
+    else if (themeIcon.classList[1] === "active" && playerOne.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeIcon.classList[1]+" - icons");
+        console.log(playerOne.classList[1] + " - 1");
+        console.log(grid6.classList[1] + " - 6x6");
+
+    } else if (themeIcon.classList[1] === "active" && playerTwo.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeIcon.classList[1] + " - icons");
+        console.log(playerTwo.classList[1] + " - 2");
+        console.log(grid6.classList[1] + " - 6x6");
+
+    } else if (themeIcon.classList[1] === "active" && playerThree.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeIcon.classList[1] + " - icons");
+        console.log(playerThree.classList[1] + " - 3");
+        console.log(grid6.classList[1] + " - 6x6");
+
+    } else if(themeIcon.classList[1] === "active" && playerFour.classList[1] === "active" && grid6.classList[1] === "active") {
+        console.log(themeIcon.classList[1] + " - icons");
+        console.log(playerFour.classList[1] + " - 4");
+        console.log(grid6.classList[1] + " - 6x6");
+
+    }
+
 }
 
 // Initially display default buttons
